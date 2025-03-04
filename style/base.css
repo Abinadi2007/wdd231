@@ -5,25 +5,6 @@ body {
     padding: 0;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile img {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.profile h1 {
-    font-size: 24px;
-    color: white;
-}
-
 .header {
     background-color: #1f3a5f;
     color: white;
@@ -48,62 +29,91 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     display: inline-block;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
 }
 
 .navbar a:hover {
-    color: yellow;
+    color: #ffcc00;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile h1 {
+    font-size: 24px;
+    color: white;
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .box {
     background-color: white;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     width: 48%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: translateY(-5px);
 }
 
 .box h2 {
     background-color: #1f3a5f;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px 8px 0 0;
+    font-size: 18px;
 }
 
 .large-box {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .course-list, .certificates {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .button {
-    background-color: brown;
+    background-color: #8b0000;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    margin: 5px;
+    margin: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .button:hover {
     background-color: #a0522d;
+    transform: scale(1.05);
 }
 
 footer {
@@ -111,35 +121,9 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #1E3A5F;
     color: white;
     font-size: 14px;
-}
-
-footer span {
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-footer .last-modified {
-    margin-top: 5px;
-    font-size: 12px;
-}
-
-footer img {
-    width: 30px;
-    height: auto;
-    margin-top: 5px;
-}
-
-.filter-buttons button,
-.courses button {
-    min-width: 80px;
-}
-
-#currentyear, #last-modified {
-    display: inline-block;
-    min-width: 80px; 
-    text-align: center;
+    margin-top: 30px
 }

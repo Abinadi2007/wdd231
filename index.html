@@ -5,62 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 / Joseph Jimenez / Chamber of Commerce</title>
     <link rel="stylesheet" href="style/base.css">
-
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="profile">
             <img src="images/josephjimenez.jpg" alt="Profile Picture">
             <h1>Joseph A. Jimenez</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/joseph-abinad%C3%AD-jim%C3%A9nez-davis-5112a02a1/">LinkedIn</a></li>
-            </ul>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/joseph-abinad%C3%AD-jim%C3%A9nez-davis-5112a02a1/">LinkedIn</a>
         </nav>
     </header>
     
-    <main>
-        <section class="grid-container">
-            <div class="box">
-                <h2>Course Work</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="box">
-                <h2>Tegucigalpa, Honduras</h2>
-                <img src="images/tegucigalpa.jpg" alt="Tegucigalpa City">
-                <p>Baobab Trees</p>
-            </div>
+    <main class="container">
+        <section class="box">
+            <h2>Course Work</h2>
+            <ul>
+                <li>CSE 110</li>
+                <li>WDD 130</li>
+                <li>CSE 210</li>
+            </ul>
         </section>
-        
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="filter-buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
-            </div>
-            <div class="courses">
-                <button class="cse">CSE 110</button>
-                <button class="wdd">WDD 130</button>
-                <button class="cse">CSE 111</button>
-                <button class="cse">CSE 210</button>
-                <button class="wdd">WDD 131</button>
-                <button class="wdd">WDD 231</button>
-            </div>
+        <section class="box">
+            <h2>Tegucigalpa, Honduras</h2>
+            <img src="images/tegucigalpa.jpg" alt="Tegucigalpa City">
+            <p>Tegucigalpa is the capital of Honduras, known for its rich history and culture.</p>
         </section>
     </main>
     
+    <section class="large-box">
+        <h2>Web and Computer Programming Certificate</h2>
+        <div class="filter-buttons">
+            <button>All</button>
+            <button>CSE</button>
+            <button>WDD</button>
+        </div>
+        <div class="course-list">
+            <button class="button">CSE 110</button>
+            <button class="button">WDD 130</button>
+            <button class="button">CSE 111</button>
+            <button class="button">CSE 210</button>
+            <button class="button">WDD 131</button>
+            <button class="button">WDD 231</button>
+        </div>
+    </section>
+    
     <footer>
-        <p>@ <span id="currentyear"></span> 🦜 Joseph A Jimenez 🦜 Honduras</p>
+        <p>&copy; <span id="currentyear"></span> 🦜 Joseph A Jimenez 🦜 Honduras</p>
         <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
         <img src="images/honduras.jpg" alt="Honduras Flag">
     </footer>
