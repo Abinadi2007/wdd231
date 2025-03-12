@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             displayMembers(data.members);
             displayFeaturedMembers(data.members);
         })
-        .catch(error => console.error("Error loading members:", error));
+        .catch(error => {
+            console.error("Error loading members:", error);
+            directory.innerHTML = "<p>Sorry, we couldn't load the member data at the moment.</p>"; // Error message for the user
+        });
 
     function displayMembers(members) {
         directory.innerHTML = "";
