@@ -1,22 +1,17 @@
 {
     "members": [
-    {
-        "name": "Blue Indigo Corp",
-        "address": "123 Main Street, Santa Monika",
-        "phone": "123-456-7890",
-        "website": "https://blueindigo.com"
-    },
-    {
-        "name": "Monika Tech Solutions",
-        "address": "456 Business Lane, Hokoquemunis",
-        "phone": "987-654-3210",
-        "website": "https://natsukitech.com"
-    },
-    {
-        "name": "Tahuantinsuyo Marketing",
-        "address": "789 Commerce Street, Santa Monika",
-        "phone": "555-123-4567",
-        "website": "https://hokoquemarketing.com"
-    }
-]
-}
+      {
+        "name": "Wonder Studios",
+        "address": "Residencial Aleman., Tegucigalpa, Honduras",
+        "phone": "9378-0976",
+        "website": "https://sites.google.com/view/wonderstudiosxatrucs/inicio?authuser=0"
+      },
+      {
+        "name": "Sunny Blossom Flower Shop",
+        "address": "234 Bloom St., City, State",
+        "phone": "(123) 987-6543",
+        "website": "https://unsplash.com/es/fotos/un-ramo-de-flores-que-estan-en-un-jarron-yurVcRioP8o"
+      }
+    ]
+  }
+  
