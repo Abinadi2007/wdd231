@@ -18,15 +18,41 @@
         </nav>
     </header>
     
-    <main>
-        <section id="directory" class="grid-view"></section>
-    </main>
-    
+     <section class="hero">
+        <img src="hero.jpg" alt="Business Directory Hero">
+    </section>
+
+    <section class="info-boxes">
+        <div class="box" id="events">
+            <h2>Upcoming Events</h2>
+            <p>Loading events...</p>
+        </div>
+        <div class="box" id="current-weather">
+            <h2>Current Weather</h2>
+            <p>Loading weather...</p>
+        </div>
+        <div class="box" id="weather-forecast">
+            <h2>Weather Forecast</h2>
+            <p>Loading forecast...</p>
+        </div>
+    </section>
+
+    <section id="member-container">
+        <div class="member-box">
+            <h2>Featured Members</h2>
+            <div id="featured-members"></div>
+        </div>
+        <div class="member-box">
+            <h2>All Members</h2>
+            <div id="directory" class="grid-view"></div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>&copy; <span id="year"></span> Business Directory</p>
         <p>Last Updated: <span id="lastModified"></span></p>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

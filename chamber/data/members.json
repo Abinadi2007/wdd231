@@ -6,9 +6,15 @@
         "website": "https://blueindigo.com"
     },
     {
-        "name": "Natsuki Tech Solutions",
-        "address": "456 Business Lane, Toquolupe",
+        "name": "Monika Tech Solutions",
+        "address": "456 Business Lane, Hokoquemunis",
         "phone": "987-654-3210",
         "website": "https://natsukitech.com"
+    },
+    {
+        "name": "Tahuantinsuyo Marketing",
+        "address": "789 Commerce Street, Santa Monika",
+        "phone": "555-123-4567",
+        "website": "https://hokoquemarketing.com"
     }
 ]

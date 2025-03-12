@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const directory = document.getElementById("directory");
+    const featuredMembers = document.getElementById("featured-members");
     const gridViewBtn = document.getElementById("grid-view");
     const listViewBtn = document.getElementById("list-view");
     const yearSpan = document.getElementById("year");
     const lastModifiedSpan = document.getElementById("lastModified");
+    const eventsBox = document.getElementById("events");
+    const currentWeatherBox = document.getElementById("current-weather");
+    const forecastBox = document.getElementById("weather-forecast");
 
-    // Fetch members data
     fetch("members.json")
         .then(response => response.json())
         .then(data => {
             displayMembers(data);
+            displayFeaturedMembers(data);
         });
 
     function displayMembers(members) {
@@ -27,11 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Toggle view
+    function displayFeaturedMembers(members) {
+        const featured = members.slice(0, 2);
+        featuredMembers.innerHTML = "";
+        featured.forEach(member => {
+            const div = document.createElement("div");
+            div.classList.add("member");
+            div.innerHTML = `
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+            `;
+            featuredMembers.appendChild(div);
+        });
+    }
+
+    eventsBox.innerHTML = "<h2>Upcoming Events</h2><p>Business Expo - March 25</p><p>Networking Night - April 10</p>";
+
+    function fetchWeather() {
+        currentWeatherBox.innerHTML = `<h2>Current Weather</h2><p>Sunny, 75°F</p>`;
+        forecastBox.innerHTML = `<h2>Weather Forecast</h2><p>Tomorrow: Cloudy, 72°F</p><p>Friday: Rainy, 68°F</p>`;
+    }
+    fetchWeather();
+
     gridViewBtn.addEventListener("click", () => directory.classList.add("grid-view"));
     listViewBtn.addEventListener("click", () => directory.classList.remove("grid-view"));
 
-    // Set footer dates
     yearSpan.textContent = new Date().getFullYear();
     lastModifiedSpan.textContent = document.lastModified;
 });
