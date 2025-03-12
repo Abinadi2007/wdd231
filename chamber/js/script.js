@@ -10,11 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const forecastBox = document.getElementById("weather-forecast");
 
     fetch("members.json")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error("Network issue");
+            return response.json();
+        })
         .then(data => {
-            displayMembers(data);
-            displayFeaturedMembers(data);
-        });
+            console.log("Loaded Members:", data);
+
+            displayMembers(data.members);
+            displayFeaturedMembers(data.members);
+        })
+        .catch(error => console.error("Error loading members:", error));
 
     function displayMembers(members) {
         directory.innerHTML = "";
@@ -23,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
             div.classList.add("member");
             div.innerHTML = `
                 <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
             `;
             directory.appendChild(div);
         });
@@ -36,18 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
         featuredMembers.innerHTML = "";
         featured.forEach(member => {
             const div = document.createElement("div");
-            div.classList.add("member");
+            div.classList.add("member", "featured");
             div.innerHTML = `
                 <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
             `;
             featuredMembers.appendChild(div);
         });
     }
 
-    eventsBox.innerHTML = "<h2>Upcoming Events</h2><p>Business Expo - March 25</p><p>Networking Night - April 10</p>";
+    eventsBox.innerHTML = `
+        <h2>Upcoming Events</h2>
+        <p>Business Expo - March 25</p>
+        <p>Networking Night - April 10</p>
+    `;
 
     function fetchWeather() {
         currentWeatherBox.innerHTML = `<h2>Current Weather</h2><p>Sunny, 75°F</p>`;

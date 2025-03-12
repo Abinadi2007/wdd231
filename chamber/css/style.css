@@ -47,6 +47,15 @@ nav button:hover {
     border-radius: 8px;
 }
 
+.member {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+}
+
 .member-box {
     margin: 20px;
     padding: 20px;
@@ -64,7 +73,9 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    border: 2px solid red;
 }
+
 
 .grid-view .member {
     width: 30%;
