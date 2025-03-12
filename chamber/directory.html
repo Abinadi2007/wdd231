@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Business Directory">
+    <meta name="description" content="Explore the local businesses in the Chamber of Commerce directory for Santa Monika, find services, contact information, and more.">
     <meta name="author" content="Joseph Abinadi Jimenez Davis">
-    <title>Business Directory</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Chamber of Commerce Directory page</title>
+
+    <meta property="og:title" content="WDD 231 / Joseph Jimenez / Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abinadi2007.github.io/wdd231/">
+    <meta property="og:description" content="Explore the local businesses in the Chamber of Commerce directory for Santa Monika, find services, contact information, and more.">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="canonical" href="https://abinadi2007.github.io/wdd231/">
+
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -15,11 +24,24 @@
         <nav>
             <button id="grid-view">Grid View</button>
             <button id="list-view">List View</button>
+
+            <a href="#section1">Section 1</a>
+            <a href="#section2">Section 2</a>
         </nav>
     </header>
     
      <section class="hero">
         <img src="images/heroimage.png" alt="Business Directory Hero">
+    </section>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>Content for Section 1.</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>Content for Section 2.</p>
     </section>
 
     <section class="info-boxes">
@@ -53,6 +75,6 @@
         <p>Last Updated: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="scripts/main.js" async></script>
 </body>
 </html>
