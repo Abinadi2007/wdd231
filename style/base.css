@@ -95,6 +95,24 @@ body {
     font-weight: bold;
 }
 
+.breadcrumb {
+    font-size: 16px;
+    color: #555;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #1f3a5f;
+}
+
+.breadcrumb span {
+    color: #888;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
 .menu-btn {
     background: none;
     border: none;
@@ -225,11 +243,31 @@ body {
     margin-top: 25px;
 }
 
-.course-list, .certificates {
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.filters select {
+    padding: 5px;
+}
+
+.course-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+}
+
+.course-item {
+    width: 48%;
+    margin: 10px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .button-container {

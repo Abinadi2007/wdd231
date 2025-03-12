@@ -46,8 +46,14 @@
     </header>
     
     <main class="container"> 
+        <nav class="breadcrumb">
+            <a href="#">Home</a> > 
+            <a href="#">Courses</a> > 
+            <span>Course List</span>
+        </nav>
+
         <section class="box">
-            <h2>Course Work</h2>
+            <h2>Course Work</h2>     
             <ul>
                 <li>CSE 110</li>
                 <li>WDD 130</li>
@@ -62,18 +68,37 @@
 
         <section class="large-box">
             <h2>Web and Computer Programming Certificate</h2>
-            <div class="filter-buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+
+            <div class="filters">
+                <label for="course-filter">Filter Courses:</label>
+                <select id="course-filter" onchange="filterCourses()">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="in-progress">In Progress</option>
+                </select>
             </div>
-            <div class="course-list">
-                <button class="button">CSE 110</button>
-                <button class="button">WDD 130</button>
-                <button class="button">CSE 111</button>
-                <button class="button">CSE 210</button>
-                <button class="button">WDD 131</button>
-                <button class="button">WDD 231</button>
+
+            <div class="course-list" id="course-list">
+                <div class="course-item" data-status="completed">
+                    <h3>CSE 110</h3>
+                    <p>Credits: 3</p>
+                </div>
+                <div class="course-item" data-status="in-progress">
+                    <h3>WDD 130</h3>
+                    <p>Credits: 4</p>
+                </div>
+                <div class="course-item" data-status="completed">
+                    <h3>CSE 210</h3>
+                    <p>Credits: 3</p>
+                </div>
+                <div class="course-item" data-status="completed">
+                    <h3>CSE 111</h3>
+                    <p>Credits: 2</p>
+                </div>
+            </div>
+
+            <div id="total-credits">
+                Total Credits: 0
             </div>
         </section>
     </main>
