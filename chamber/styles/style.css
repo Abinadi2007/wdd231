@@ -35,9 +35,68 @@ nav a:hover {
     object-fit: cover;
 }
 
+section {
+    margin: 20px;
+}
+
+#grid-list-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#grid-view, #list-view {
+    width: 48%;
+}
+
+.grid-container, .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ensure both grid and list views have wide rectangle boxes */
+.grid-container .box, .list-container .box {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%; /* Full width of container to create the wide rectangle */
+}
+
+/* Adjusting the box layout for both grid and list views */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Additional styles for list-view items */
+.list-item {
+    margin-bottom: 20px;
+    width: 100%; /* Ensure list items take up full width */
+}
+
+/* Add box style for list-view items */
+.list-container .list-item {
+    display: block;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure it's a wide rectangle */
+}
+
 .info-boxes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px;
 }
@@ -50,15 +109,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-.member {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 250px;
-}
-
 .member-box {
     margin: 20px;
     padding: 20px;
@@ -67,8 +117,10 @@ nav a:hover {
     border-radius: 8px;
 }
 
-main {
-    padding: 20px;
+#member-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 #directory {
@@ -76,21 +128,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    border: 2px solid red;
-}
-
-
-.grid-view .member {
-    width: 30%;
-}
-
-.list-view {
-    display: block;
-}
-
-.list-view .member {
-    width: 100%;
-    text-align: left;
 }
 
 footer {
@@ -98,4 +135,12 @@ footer {
     color: white;
     padding: 1rem;
     margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#year, #lastModified {
+    font-weight: bold;
 }
