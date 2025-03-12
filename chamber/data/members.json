@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Blue Indigo Corp",
+        "address": "123 Main Street, Santa Monika",
+        "phone": "123-456-7890",
+        "website": "https://blueindigo.com"
+    },
+    {
+        "name": "Natsuki Tech Solutions",
+        "address": "456 Business Lane, Toquolupe",
+        "phone": "987-654-3210",
+        "website": "https://natsukitech.com"
+    }
+]
