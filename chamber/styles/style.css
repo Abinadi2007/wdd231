@@ -55,16 +55,14 @@ section {
     gap: 20px;
 }
 
-/* Ensure both grid and list views have wide rectangle boxes */
 .grid-container .box, .list-container .box {
     padding: 20px;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    width: 100%; /* Full width of container to create the wide rectangle */
+    width: 100%;
 }
 
-/* Adjusting the box layout for both grid and list views */
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -77,13 +75,11 @@ section {
     gap: 20px;
 }
 
-/* Additional styles for list-view items */
 .list-item {
     margin-bottom: 20px;
-    width: 100%; /* Ensure list items take up full width */
+    width: 100%;
 }
 
-/* Add box style for list-view items */
 .list-container .list-item {
     display: block;
     padding: 20px;
@@ -91,7 +87,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 100%; /* Ensure it's a wide rectangle */
+    width: 100%;
 }
 
 .info-boxes {
