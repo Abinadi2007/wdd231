@@ -12,16 +12,19 @@ header {
     padding: 1rem;
 }
 
-nav button {
+nav a {
     margin: 5px;
     padding: 10px;
+    text-decoration: none;
     border: none;
     background: #004c99;
     color: white;
     cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
 }
 
-nav button:hover {
+nav a:hover {
     background: #003366;
 }
 
