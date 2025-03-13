@@ -92,6 +92,7 @@ section {
     margin: 20px;
 }
 
+/* Updated Grid/List View CSS */
 #grid-list-container {
     display: flex;
     justify-content: space-between;
@@ -143,6 +144,7 @@ section {
     width: 100%;
 }
 
+/* Updated Info-Boxes and Member-Box CSS */
 .info-boxes {
     display: flex;
     justify-content: space-between;
@@ -164,6 +166,31 @@ section {
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+}
+
+/* New Main Layout with Flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#events, #current-weather, #weather-forecast {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+#directory, #featured-members {
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    min-width: 300px;
 }
 
 #member-container {
