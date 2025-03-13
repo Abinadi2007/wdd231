@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const listViewBtn = document.getElementById("list-view");
     const yearSpan = document.getElementById("year");
     const lastModifiedSpan = document.getElementById("lastModified");
-    const eventsBox = document.querySelector("#events p").innerHTML = "New event details";
+    const eventsBox = document.querySelector("events");
     const currentWeatherBox = document.getElementById("current-weather");
     const forecastBox = document.getElementById("weather-forecast");
 

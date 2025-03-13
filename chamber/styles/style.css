@@ -92,7 +92,6 @@ section {
     margin: 20px;
 }
 
-/* Updated Grid/List View CSS */
 #grid-list-container {
     display: flex;
     justify-content: space-between;
@@ -144,7 +143,6 @@ section {
     width: 100%;
 }
 
-/* Updated Info-Boxes and Member-Box CSS */
 .info-boxes {
     display: flex;
     justify-content: space-between;
@@ -168,7 +166,6 @@ section {
     border-radius: 8px;
 }
 
-/* New Main Layout with Flexbox */
 main {
     display: flex;
     flex-wrap: wrap;
