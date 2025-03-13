@@ -5,25 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const listViewBtn = document.getElementById("list-view");
     const yearSpan = document.getElementById("year");
     const lastModifiedSpan = document.getElementById("lastModified");
-    const eventsBox = document.querySelector("events");
+    const eventsBox = document.getElementById("events");
     const currentWeatherBox = document.getElementById("current-weather");
     const forecastBox = document.getElementById("weather-forecast");
 
-    console.log("Checking Elements:", {
-        directory,
-        featuredMembers,
-        gridViewBtn,
-        listViewBtn,
-        yearSpan,
-        lastModifiedSpan,
-        eventsBox,
-        currentWeatherBox,
-        forecastBox
-    });
-
     async function loadMembers() {
         try {
-            const response = await fetch("members.json");
+            const response = await fetch("scripts/members.json");
             if (!response.ok) throw new Error("Failed to load members.json");
 
             const data = await response.json();
