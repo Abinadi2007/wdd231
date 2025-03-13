@@ -9,21 +9,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentWeatherBox = document.getElementById("current-weather");
     const forecastBox = document.getElementById("weather-forecast");
 
-    fetch("members.json")
-        .then(response => {
-            if (!response.ok) throw new Error("Network issue");
-            return response.json();
-        })
-        .then(data => {
+    console.log("Checking Elements:", {
+        directory,
+        featuredMembers,
+        gridViewBtn,
+        listViewBtn,
+        yearSpan,
+        lastModifiedSpan,
+        eventsBox,
+        currentWeatherBox,
+        forecastBox
+    });
+
+    async function loadMembers() {
+        try {
+            const response = await fetch("members.json");
+            if (!response.ok) throw new Error("Failed to load members.json");
+
+            const data = await response.json();
             console.log("Loaded Members:", data);
 
             displayMembers(data.members);
             displayFeaturedMembers(data.members);
-        })
-        .catch(error => {
+        } catch (error) {
             console.error("Error loading members:", error);
-            directory.innerHTML = "<p>Sorry, we couldn't load the member data at the moment.</p>"; // Error message for the user
-        });
+            directory.innerHTML = "<p>Sorry, we couldn't load the member data at the moment.</p>";
+        }
+    }
 
     function displayMembers(members) {
         directory.innerHTML = "";
@@ -73,4 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     yearSpan.textContent = new Date().getFullYear();
     lastModifiedSpan.textContent = document.lastModified;
+
+    loadMembers();
 });
