@@ -66,6 +66,13 @@ section {
     gap: 20px;
 }
 
+#directory.grid-container .member-box {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
 #member-container {
     display: flex;
     justify-content: space-between;

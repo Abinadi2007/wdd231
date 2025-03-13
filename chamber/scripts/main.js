@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     function fetchWeather() {
-        currentWeatherBox.innerHTML = `<h2>Current Weather</h2><p>Sunny, 75°F</p>`;
-        forecastBox.innerHTML = `<h2>Weather Forecast</h2><p>Tomorrow: Cloudy, 72°F</p><p>Friday: Rainy, 68°F</p>`;
+        currentWeatherBox.innerHTML = '<h2>Current Weather</h2><p>Sunny, 75°F</p>';
+        forecastBox.innerHTML = '<h2>Weather Forecast</h2><p>Tomorrow: Cloudy, 72°F</p><p>Friday: Rainy, 68°F</p>';
     }
     fetchWeather();
 
-    gridViewBtn.addEventListener("click", () => directory.classList.add("grid-view"));
-    listViewBtn.addEventListener("click", () => directory.classList.remove("grid-view"));
+    gridViewBtn.addEventListener("click", () => directory.classList.add("grid-container"));
+    listViewBtn.addEventListener("click", () => directory.classList.remove("grid-container"));
 
     yearSpan.textContent = new Date().getFullYear();
     lastModifiedSpan.textContent = document.lastModified;
