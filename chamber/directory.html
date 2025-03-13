@@ -43,7 +43,34 @@
         <section id="events"></section>
         <section id="current-weather"></section>
         <section id="weather-forecast"></section>
-    </main>    
+    </main>
+    <main>
+        <section class="info-boxes">
+        <div class="box" id="events">
+            <h2>Upcoming Events</h2>
+            <p>Loading events...</p>
+        </div>
+        <div class="box" id="current-weather">
+            <h2>Current Weather</h2>
+            <p>Loading weather...</p>
+        </div>
+        <div class="box" id="weather-forecast">
+            <h2>Weather Forecast</h2>
+            <p>Loading forecast...</p>
+        </div>
+    </section>
+
+    <section id="member-container">
+        <div class="member-box">
+            <h2>Featured Members</h2>
+            <div id="featured-members"></div>
+        </div>
+        <div class="member-box">
+            <h2>All Members</h2>
+            <div id="directory"></div>
+        </div>
+    </section>
+    </main> 
 
     <section id="grid-list-container">
         <div id="grid-view">
@@ -94,6 +121,6 @@
         <p>Last Updated: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/main.js" async></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
