@@ -62,11 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>Networking Night - April 10</p>
     `;
 
-    function fetchWeather() {
-        currentWeatherBox.innerHTML = '<h2>Current Weather</h2><p>Sunny, 75°F</p>';
-        forecastBox.innerHTML = '<h2>Weather Forecast</h2><p>Tomorrow: Cloudy, 72°F</p><p>Friday: Rainy, 68°F</p>';
+    function generateRandomWeather() {
+        const temperatures = ["28°C", "30°C", "35°C", "32°C", "29°C", "27°C"];
+        const conditions = ["Sunny with warm breezes", "Tropical rainstorm", "Extremely hot and humid", "Partly cloudy", "Thunderstorms", "Breezy and warm"];
+
+        const temp = temperatures[Math.floor(Math.random() * temperatures.length)];
+        const condition = conditions[Math.floor(Math.random() * conditions.length)];
+
+        currentWeatherBox.innerHTML = `<h2>Current Weather in Santa Monika</h2><p>${temp} - ${condition}</p>`;
+        forecastBox.innerHTML = `<h2>Weather Forecast</h2><p>Tomorrow: ${temperatures[Math.floor(Math.random() * temperatures.length)]} - ${conditions[Math.floor(Math.random() * conditions.length)]}</p>`;
     }
-    fetchWeather();
+    generateRandomWeather();
 
     gridViewBtn.addEventListener("click", () => directory.classList.add("grid-container"));
     listViewBtn.addEventListener("click", () => directory.classList.remove("grid-container"));
