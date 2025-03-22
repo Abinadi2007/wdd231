@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".carousel-images img");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    let index = 0;
+
+    function updateCarousel() {
+        const offset = -index * 100;
+        document.querySelector(".carousel-images").style.transform = `translateX(${offset}%)`;
+    }
+
+    nextButton.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+    });
+
     const directory = document.getElementById("directory");
     const featuredMembers = document.getElementById("featured-members");
     const gridViewBtn = document.getElementById("grid-view");
