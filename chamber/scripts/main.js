@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentWeatherBox.innerHTML = `<h2>Current Weather in Santa Monika</h2><p>${temp} - ${condition}</p>`;
         forecastBox.innerHTML = `<h2>Weather Forecast</h2><p>Tomorrow: ${temperatures[Math.floor(Math.random() * temperatures.length)]} - ${conditions[Math.floor(Math.random() * conditions.length)]}</p>`;
     }
+
     generateRandomWeather();
 
     gridViewBtn.addEventListener("click", () => directory.classList.add("grid-container"));
