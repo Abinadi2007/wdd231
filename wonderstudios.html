@@ -12,43 +12,68 @@
     <link rel="stylesheet" href="style/wonderstudios.css">
 </head>
 <body>
-    <header class="hero" style="background-image: url('images/hero-image.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
-        <div class="hero-content">
-            <h1>Wonder Studios Xatrucs</h1>
+    <header>
+        <div class="top-bar">
+        <span>Last Update: April 8, 2025 </span>
+        <span>Weather Forecast: Sunny</span>
+        <div><strong>WONDER STUDIOS</strong></div>
         </div>
-            
-    <section id="info-box" class="info-section">
-        <p>Wonder Studios: Great Things Ahead</p>
+        <div class="nav-bar">
         <nav>
-            <ul class="nav-links">
-                <li><a href="#santa-monika">Santa Monika</a></li>
-                <li><a href="#twin-sisters">The Twin Sisters</a></li>
-                <li><a href="#venenosa">Venenosa</a></li>
-            </ul>
+          <button onclick="showInfo()">Info.</button>
+          <button onclick="showGallery()">Gallery</button>
+          <button>Sign in</button>
         </nav>
-    </section>
-
-    </header>
-   
-    <main>
-        <section id="stories" class="story-section">
-            <article class="story" id="santa-monika">
-                <h3>Santa Monika</h3>
-                <p>Discover the history of the city of Santa Monika</p>
-            </article>
-            <article class="story" id="twin-sisters">
-                <h3>The Twin Sisters</h3>
-                <p>Did you miss them?</p>
-            </article>
-            <article class="story" id="venenosa">
-                <h3>Venenosa</h3>
-                <p>Even the bravest fear her!</p>
-            </article>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Wonder Studios. Todos los derechos reservados. <a href="references.html">Referencias</a></p>
-    </footer>
+        </div>
+      </header>
+    
+      <div class="hero">
+        <img src="images/hero-image.jpg" alt="hero image" class="hero-image">
+        <div class="weather">
+          <strong>Weather Forecast</strong>
+          <p id="weatherText">Cargando clima...</p>
+        </div>
+      </div>
+    
+      <section class="section grid-2">
+        <div class="card">
+          <h2>WONDER NEWS</h2>
+          <p>Últimas noticias destacadas de Wonder Studios.</p>
+        </div>
+        <div class="card">
+          <h2>Weekly Update</h2>
+          <p>Actualizaciones semanales del equipo y novedades.</p>
+        </div>
+      </section>
+    
+      <section class="section grid-4">
+        <div class="card">
+          <img src="images/referenceimage1.jpg" alt="imagen 1" />
+          <p>Info sobre imagen 1</p>
+        </div>
+        <div class="card">
+          <p>Texto relacionado al contenido del sitio o galería.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="imagen 2" />
+          <p>Info sobre imagen 2</p>
+        </div>
+        <div class="card">
+          <p>Más detalles o curiosidades sobre la galería o noticias.</p>
+        </div>
+      </section>
+    
+      <section class="section">
+        <div class="card">
+          <h2>WONDER STUDIOS TEAM</h2>
+          <p>Conoce al equipo detrás de las maravillas visuales.</p>
+        </div>
+      </section>
+    
+      <footer>
+        <p>&copy; 2025 WONDER STUDIOS. Todos los derechos reservados.</p>
+      </footer>
+    
+      <script src="scripts/wonderinfo.js"></script>
 </body>
 </html>

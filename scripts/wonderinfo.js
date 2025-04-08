@@ -1,21 +1,13 @@
-function updateDateTime() {
-    const now = new Date();
-    const formattedDate = now.toLocaleString("es-ES", { dateStyle: "full", timeStyle: "short" });
-    document.getElementById("date-time").textContent = formattedDate;
-}
+function showInfo() {
+    alert("This is the section of general information.");
+  }
 
-async function fetchWeather() {
-    try {
-        const response = await fetch("https://api.weatherapi.com/v1/current.json?key=TU_API_KEY&q=auto:ip&lang=es");
-        const data = await response.json();
-        document.getElementById("weather").textContent = `Clima: ${data.current.temp_c}°C, ${data.current.condition.text}`;
-    } catch (error) {
-        document.getElementById("weather").textContent = "No se pudo obtener el clima.";
-    }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    updateDateTime();
-    fetchWeather();
-    setInterval(updateDateTime, 60000);
-});
+  function showGallery() {
+    alert("This is the interactive gallery.");
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+      document.getElementById("weatherText").innerText = "Soleado, 24°C";
+    }, 1500);
+  });

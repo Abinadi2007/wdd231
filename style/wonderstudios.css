@@ -1,125 +1,133 @@
-:root {
-    --primary-color: #0073cf;
-    --secondary-color: #ffffff;
-    --accent-color: #002147;
-    --text-color: #333333;
-    --font-primary: "Ubuntu", sans-serif;
-    --font-secondary: "Oswald", sans-serif;
-}
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+  }
 
-body {
-    font-family: var(--font-primary);
-    color: var(--text-color);
-    background-color: #f8f8f8;
+  body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-}
+    background-color: #f2f2f2;
+  }
 
-header.hero {
-    background-image: url('images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  header {
+    background-color: #007fd4;
     color: white;
-    position: relative;
-}
+  }
 
-.hero-content h1 {
-    font-size: 3rem;
-    font-family: "Oswald", sans-serif;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 10px;
-}
+  .top-bar {
+    background-color: #3988d1;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #042180;
+  }
 
-.info-section {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 20px;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-content p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.navbar {
+  .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50;
-    padding: 15px 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    padding: 1rem;
+  }
+
+  .nav-bar nav button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #153053;
+    border: none;
     color: white;
-}
+    cursor: pointer;
+  }
 
-.nav-links {
-    list-style: none;
-    padding: 0;
+  .hero {
+    background: url('images/hero-image.png') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: #0073cf;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #002147;
-}
-
-.story-section {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: flex-end;
+    color: white;
     padding: 2rem;
-}
+    position: relative;
+  }
 
-.story {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 300px;
-    text-align: center;
-}
+  .hero-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
 
-footer.footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-medium {
+    height: 50vh;
+  }
+
+  .hero-small {
+    height: 30vh;
+  }
+
+  .weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #33323a;
+    padding: 1rem;
+    border: 2px solid #444;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .grid-2, .grid-4 {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+
+  .card img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    background-color: #444;
+    color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 20px;
-}
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .grid-2, .grid-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .weather {
+      position: static;
+      margin-top: 1rem;
+    }
+  }
