@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/wonderstudios.css">
+    
+    <script src="scripts/wonderweather.js"></script>
+    <script src="scripts/wonderupdate.js"></script>
 </head>
 <body>
     <header>
@@ -29,21 +32,23 @@
     
       <div class="hero">
         <img src="images/hero-image.jpg" alt="hero image" class="hero-image">
-        <div class="weather">
-          <strong>Weather Forecast</strong>
-          <p id="weatherText">Cargando clima...</p>
-        </div>
       </div>
-    
-      <section class="section grid-2">
+      <div class="container">
+        <div class="card">
+          <strong>Weather Forecast</strong>
+          <p id="weather-text">Loading weather...</p>
+        </div>
+
         <div class="card">
           <h2>WONDER NEWS</h2>
           <p>Últimas noticias destacadas de Wonder Studios.</p>
         </div>
-        <div class="card">
+        
+          <div class="card">
           <h2>Weekly Update</h2>
-          <p>Actualizaciones semanales del equipo y novedades.</p>
+          <p id="weekly-update-text">Loading...</p>
         </div>
+      </div>
       </section>
     
       <section class="section grid-4">
@@ -73,7 +78,5 @@
       <footer>
         <p>&copy; 2025 WONDER STUDIOS. Todos los derechos reservados.</p>
       </footer>
-    
-      <script src="scripts/wonderinfo.js"></script>
 </body>
 </html>
