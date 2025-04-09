@@ -1,22 +1,8 @@
-const clientId = '48313';
-const clientSecret = '7693c123caa27dd1b8c53930383bc8dd';
-const username = 'HonduranBug';
-
 async function fetchDeviantArtStatus() {
   try {
-    const tokenResponse = await fetch('https://www.deviantart.com/oauth2/token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`
-    });
-
-    const tokenData = await tokenResponse.json();
-    const accessToken = tokenData.access_token;
-
-    const statusResponse = await fetch(`https://www.deviantart.com/api/v1/oauth2/user/statuses/${username}?access_token=${accessToken}`);
-    const statusData = await statusResponse.json();
-
-    const post = statusData.results[0];
+    const response = await fetch('http://localhost:3000/get-status'); // Asegúrate que tu servidor esté corriendo
+    const data = await response.json();
+    const post = data.results?.[0];
 
     if (post) {
       document.getElementById('weekly-update-text').textContent = post.body;
