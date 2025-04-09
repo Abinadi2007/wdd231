@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/wonderstudios.css">
     
     <script src="scripts/wonderweather.js"></script>
-    <script src="scripts/wonderupdate.js"></script>
+    <script src="scripts/wonderupdate.js" defer></script>
 </head>
 <body>
     <header>
@@ -33,7 +33,8 @@
       <div class="hero">
         <img src="images/hero-image.jpg" alt="hero image" class="hero-image">
       </div>
-      <div class="container">
+
+      <div class="info-cards">
         <div class="card">
           <strong>Weather Forecast</strong>
           <p id="weather-text">Loading weather...</p>
@@ -43,7 +44,7 @@
           <h2>WONDER NEWS</h2>
           <p>Últimas noticias destacadas de Wonder Studios.</p>
         </div>
-        
+
           <div class="card">
           <h2>Weekly Update</h2>
           <p id="weekly-update-text">Loading...</p>

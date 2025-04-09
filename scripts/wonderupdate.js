@@ -13,7 +13,7 @@ async function fetchDeviantArtStatus() {
     const tokenData = await tokenResponse.json();
     const accessToken = tokenData.access_token;
 
-    const statusResponse = await fetch(`https://www.deviantart.com/api/v1/oauth2/user/statuses/HonduranBug?access_token=${accessToken}`);
+    const statusResponse = await fetch(`https://www.deviantart.com/api/v1/oauth2/user/statuses/${username}?access_token=${accessToken}`);
     const statusData = await statusResponse.json();
 
     const post = statusData.results[0];
@@ -29,3 +29,5 @@ async function fetchDeviantArtStatus() {
     document.getElementById('weekly-update-text').textContent = "Could not fetch updates.";
   }
 }
+
+document.addEventListener('DOMContentLoaded', fetchDeviantArtStatus);
