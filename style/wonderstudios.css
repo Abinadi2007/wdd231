@@ -88,25 +88,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    max-width: 100%;
-    overflow: hidden;
   }
-  
-  .quote-flex img {
-    flex-shrink: 0;
-  }
-
-  .quote-flex blockquote {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }  
   
   .quote-img {
-    max-width: 120px;
+    max-width: 100px;
     height: auto;
     border-radius: 10px;
-    object-fit: contain;
   }
   
   blockquote {
@@ -117,7 +104,7 @@
   blockquote footer {
     margin-top: 0.5rem;
     font-size: 0.9em;
-    color: #ebdcdc;
+    color: #555;
   }  
 
   .section {
