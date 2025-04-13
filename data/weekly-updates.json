@@ -1,0 +1,20 @@
+{
+    "weeks": [
+      {
+        "start": "2025-04-07",
+        "end": "2025-04-13",
+        "message": "¡Explora las novedades de esta semana en Wonder Studios! Se viene un tráiler exclusivo."
+      },
+      {
+        "start": "2025-04-14",
+        "end": "2025-04-20",
+        "message": "Esta semana revelamos el arte conceptual de nuestros próximos personajes. ¡No te lo pierdas!"
+      },
+      {
+        "start": "2025-04-21",
+        "end": "2025-04-27",
+        "message": "Behind the scenes en camino. Te mostraremos cómo se hizo nuestro último cortometraje animado."
+      }
+    ]
+  }
+  

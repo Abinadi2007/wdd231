@@ -1,19 +1,26 @@
-async function fetchDeviantArtStatus() {
+async function fetchWeeklyUpdate() {
   try {
-    const response = await fetch('http://localhost:3000/get-status'); // Asegúrate que tu servidor esté corriendo
+    const response = await fetch('data/weekly-updates.json');
     const data = await response.json();
-    const post = data.results?.[0];
 
-    if (post) {
-      document.getElementById('weekly-update-text').textContent = post.body;
+    const today = new Date();
+
+    const update = data.weeks.find(week => {
+      const startDate = new Date(week.start);
+      const endDate = new Date(week.end);
+      return today >= startDate && today <= endDate;
+    });
+
+    const element = document.getElementById('weekly-update-text');
+    if (update) {
+      element.textContent = update.message;
     } else {
-      document.getElementById('weekly-update-text').textContent = "No recent status updates.";
+      element.textContent = "No hay actualizaciones esta semana. ¡Vuelve pronto!";
     }
-
   } catch (error) {
-    console.error('Error fetching DeviantArt status:', error);
-    document.getElementById('weekly-update-text').textContent = "Could not fetch updates.";
+    console.error('Error cargando las actualizaciones:', error);
+    document.getElementById('weekly-update-text').textContent = "Error al cargar la actualización.";
   }
 }
 
-document.addEventListener('DOMContentLoaded', fetchDeviantArtStatus);
+document.addEventListener('DOMContentLoaded', fetchWeeklyUpdate);

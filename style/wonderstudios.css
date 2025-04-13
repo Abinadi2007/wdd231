@@ -84,6 +84,42 @@
     border: 2px solid #444;
   }
 
+  .quote-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .quote-flex img {
+    flex-shrink: 0;
+  }
+
+  .quote-flex blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }  
+  
+  .quote-img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin: 0;
+  }
+  
+  blockquote footer {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: #ebdcdc;
+  }  
+
   .section {
     padding: 2rem;
   }

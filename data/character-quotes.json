@@ -1,0 +1,20 @@
+{
+    "quotes": {
+      "1": {
+        "character": "Kristell Yamasaki",
+        "quote": "Si el estudio fuese una condena, que me den cadena perpetua.",
+        "image": "images/kristell.png"
+      },
+      "2": {
+        "character": "Mia Vanessa",
+        "quote": "No vine a salvar el día, vine a ponerlo patas arriba.",
+        "image": "images/mia.png"
+      },
+      "3": {
+        "character": "Khan Nikamura",
+        "quote": "La política es un arte... y yo soy su villano favorito.",
+        "image": "images/khan.png"
+      }
+    }
+  }
+  

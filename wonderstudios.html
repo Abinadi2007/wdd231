@@ -13,12 +13,14 @@
     
     <script src="scripts/wonderweather.js"></script>
     <script src="scripts/wonderupdate.js" defer></script>
+    <script src="scripts/wondernews.js" defer></script>
+    <script src="scripts/characterquotes.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-bar">
         <span>Last Update: April 8, 2025 </span>
-        <span>Weather Forecast: Sunny</span>
+        <span id="weather-text">Loading weather...</span>
         <div><strong>WONDER STUDIOS</strong></div>
         </div>
         <div class="nav-bar">
@@ -36,13 +38,13 @@
 
       <div class="info-cards">
         <div class="card">
-          <strong>Weather Forecast</strong>
-          <p id="weather-text">Loading weather...</p>
+          <strong>Character Quotes</strong>
+          <p id="character-quote-card">Loading Quotes...</p>
         </div>
 
         <div class="card">
           <h2>WONDER NEWS</h2>
-          <p>Últimas noticias destacadas de Wonder Studios.</p>
+          <p id="wonder-news-text">Loading news...</p>
         </div>
 
           <div class="card">
