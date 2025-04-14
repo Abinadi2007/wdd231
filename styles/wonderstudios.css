@@ -342,3 +342,31 @@ body.dark .quote-block {
   text-align: center;
   margin-top: 1rem;
 }
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.translate-widget {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.goog-te-combo {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.goog-te-combo:hover {
+  background-color: #e6e6e6;
+}
