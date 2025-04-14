@@ -1,36 +1,31 @@
-async function fetchCharacterQuote() {
-    try {
-      const response = await fetch('data/character-quotes.json');
-      const data = await response.json();
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteCard = document.getElementById('character-quote-card');
   
-      const today = new Date();
-      const oneJan = new Date(today.getFullYear(), 0, 1);
-      const weekNumber = Math.ceil((((today - oneJan) / 86400000) + oneJan.getDay() + 1) / 7);
-      const isoWeek = `${today.getFullYear()}-W${String(weekNumber).padStart(2, '0')}`;
+    const quotes = [
+      { text: '“El poder sin propósito es solo ruido.”', character: 'Khan Nikamura' },
+      { text: '“No soy tu enemiga… hasta que me obligas a serlo.”', character: 'Mia Vanessa' },
+      { text: '“Si la educación fuese una condena, que me den cadena perpetua.”', character: 'Kristell Yamasaki' },
+      { text: '“El futuro se construye con errores… y con fuego.”', character: 'Mikita Kyoto' },
+      { text: '“A veces lo correcto duele más que el crimen.”', character: 'Perla Petrovy' }
+    ];
   
-      const currentQuote = data.quotes.find(q => q.week === isoWeek);
+    function displayRandomQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      const quote = quotes[random];
   
-      const container = document.getElementById('character-quote-card');
+      quoteCard.innerHTML = `
+        <blockquote class="quote-block">
+          ${quote.text}
+          <footer>— <strong>${quote.character}</strong></footer>
+        </blockquote>
+      `;
   
-      if (currentQuote) {
-        container.innerHTML = `
-          <h2>Character Quotes</h2>
-          <div class="quote-flex">
-            <img src="${currentQuote.image}" alt="${currentQuote.character}" class="quote-img">
-            <blockquote>
-              <p>"${currentQuote.quote}"</p>
-              <footer>— <strong>${currentQuote.character}</strong></footer>
-            </blockquote>
-          </div>
-        `;
-      } else {
-        container.innerHTML = "<p>No hay frase destacada esta semana.</p>";
-      }
-  
-    } catch (error) {
-      console.error('Error cargando quote:', error);
-      document.getElementById('character-quote-card').textContent = "No se pudo cargar la cita.";
+      quoteCard.classList.add('fade-in');
+      setTimeout(() => quoteCard.classList.remove('fade-in'), 1000);
     }
-  }
   
-  document.addEventListener('DOMContentLoaded', fetchCharacterQuote);  
+    displayRandomQuote();
+  
+    setInterval(displayRandomQuote, 15000);
+  });
+  

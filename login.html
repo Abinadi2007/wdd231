@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión - Wonder Studios</title>
+  <link rel="stylesheet" href="style/wonderstudios.css">
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+  <script src="scripts/firebase.js" defer></script>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Iniciar sesión</h2>
+    <form action="wonderstudios.html" method="post">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Ingresar</button>
+    </form>
+    <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+  </div>
+</body>
+</html>
