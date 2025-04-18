@@ -3,48 +3,48 @@
         "name": "Central Park",
         "address": "123 Main St, Hometown",
         "description": "A beautiful park with scenic trails and picnic areas.",
-        "image": "images/central-park.webp"
+        "image": "images/Central-Park.jpg"
     },
     {
         "name": "City Museum",
         "address": "456 Museum Rd, Hometown",
         "description": "A place to explore the rich history of our city.",
-        "image": "images/city-museum.webp"
+        "image": "images/City-museum.jpeg"
     },
     {
         "name": "Hometown Library",
         "address": "789 Book Ln, Hometown",
         "description": "A peaceful space filled with books and knowledge.",
-        "image": "images/library.webp"
+        "image": "images/City-Library.webp"
     },
     {
         "name": "Riverside Cafe",
         "address": "101 River Rd, Hometown",
         "description": "A charming cafe with the best coffee in town.",
-        "image": "images/riverside-cafe.webp"
+        "image": "images/City-Cafe.jpeg"
     },
     {
         "name": "Sunset Beach",
         "address": "202 Ocean Dr, Hometown",
         "description": "The perfect spot to enjoy the sunset.",
-        "image": "images/sunset-beach.webp"
+        "image": "images/Beach.webp"
     },
     {
         "name": "Mountain Trail",
         "address": "303 Hilltop Ave, Hometown",
         "description": "A scenic hiking trail with breathtaking views.",
-        "image": "images/mountain-trail.webp"
+        "image": "images/Mountain.webp"
     },
     {
         "name": "Local Art Gallery",
         "address": "404 Creative St, Hometown",
         "description": "Featuring works from talented local artists.",
-        "image": "images/art-gallery.webp"
+        "image": "images/gallery-art.jpg"
     },
     {
         "name": "Historic Theater",
         "address": "505 Stage Rd, Hometown",
         "description": "A vintage theater showing classic films.",
-        "image": "images/historic-theater.webp"
+        "image": "images/theater.jpg"
     }
 ]
