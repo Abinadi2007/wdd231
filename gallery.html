@@ -6,14 +6,24 @@
   <title>Galería - Wonder Studios</title>
   <link rel="icon" href="wonder.ico">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/wonderstudios.css">
+  <link rel="stylesheet" href="style/wonderstudios.css">
 </head>
 <body>
-  <header class="top-bar">
-    <div>
-      <a href="wonderstudios.html" class="nav-button">Inicio</a>
-      <strong>Galería de Wonder Studios</strong>
+  <header>
+    <div class="top-bar" role="banner">
+      <div class="container top-bar__content">
+        <span id="weather-text" aria-live="polite">Cargando clima... </span>
+
+        <strong class="logo">- WONDER STUDIOS WEATHER FORECAST</strong>
+      </div>
     </div>
+
+    <nav class="nav-bar" role="navigation">
+      <div class="container nav-bar__content">
+        <a href="wonderstudios.html" class="nav-button">Home</a>
+      </div>
+      <div id="google_translate_element" class="translate-widget"></div>
+    </nav>
   </header>
 
   <main class="gallery-container">
@@ -31,7 +41,18 @@
         <img src="images/character3.png" alt="Personaje 3">
         <p>Kristell Yamasaki - World Trade Center One</p>
       </div>
-      <!-- Agrega más imágenes según desees -->
+      <div class="gallery-item">
+        <img src="images/character4.jpg" alt="Personaje 4">
+        <p>Pagina de Comic - La Peligrosa Venenosa</p>
+        </div>
+      <div class="gallery-item">
+        <img src="images/character5.jpg" alt="Personaje 5">
+        <p>Claire Yamasaki - World Trade Center Two</p>
+        </div>
+      <div class="gallery-item">
+        <img src="images/character6.jpg" alt="Personaje 6">
+        <p>Portada de Comic - Mikita Kyoto: La Guardiana de Tokio</p>
+        </div>
     </div>
   </main>
 
